@@ -1,0 +1,150 @@
+@use '../abstracts';
+
+.item-section {
+	&__overview {
+		.item-img {
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				aspect-ratio: 1 / 1;
+				border-radius: 6px;
+			}
+		}
+	}
+
+	&__title {
+		font-size: 2.5rem;
+		font-weight: 900;
+		color: abstracts.$yellow;
+		margin-bottom: 2rem;
+	}
+
+	&__promo {
+		&--bungalow-box {
+			// background-color: abstracts.$blue;
+			padding: 1rem 1.5rem;
+			color: abstracts.$yellow;
+			font-size: 1.2rem;
+			border: 1px solid transparent;
+			transition: all 0.3s ease-in-out;
+			position: initial;
+			z-index: 2;
+			width: auto;
+			border-radius: 6px;
+			border: 1px solid abstracts.$yellow;
+			font-size: 1.2rem;
+			font-weight: 400;
+			text-transform: uppercase;
+		}
+	}
+
+	.promo {
+		font-size: 1.1rem;
+		font-weight: 300;
+		line-height: 136.345%;
+		letter-spacing: 1.62px;
+		text-transform: uppercase;
+	}
+
+	&__reservation--info {
+		.promo {
+			font-size: 1.1rem;
+			font-weight: 300;
+			line-height: 136.345%;
+			letter-spacing: 1.62px;
+			text-transform: uppercase;
+			color: abstracts.$white;
+		}
+
+		.promo-title {
+			font-size: 1.6rem;
+			font-weight: 700;
+			color: abstracts.$yellow;
+		}
+	}
+
+	&__boxes {
+		display: flex !important;
+		flex-direction: column !important;
+		gap: 1rem !important;
+	}
+
+	.overview-card {
+		display: flex;
+		flex-direction: column;
+		padding: 2rem 3rem;
+		background-color: abstracts.$dark;
+		border-radius: 6px;
+		color: abstracts.$white;
+
+		&__stats {
+			&--title {
+				font-size: 0.9rem;
+				font-weight: 300;
+				line-height: 136.345%;
+				letter-spacing: 1.62px;
+				text-transform: uppercase;
+				color: abstracts.$light-grey;
+			}
+
+			&--number {
+				color: abstracts.$white;
+				font-size: 1.4rem;
+				font-weight: 700;
+			}
+		}
+	}
+
+	&__actions {
+		display: flex;
+		justify-content: end;
+		gap: 1rem;
+
+		a,
+		.svg-button {
+			border-radius: 6px;
+			background: none;
+			padding: 0.4rem;
+			border: 1px solid transparent;
+			transition: all 0.3s ease-in-out;
+			text-decoration: none;
+			cursor: pointer !important;
+
+			&:hover {
+				background: transparent;
+				border-color: abstracts.$yellow;
+			}
+		}
+	}
+
+}
+
+@media screen and (min-width: 768px) {
+	.item-section {
+		.overview-card {
+			&__stats {
+				&--title {
+					margin-bottom: 0.3rem !important;
+					font-size: 1.2rem !important;
+				}
+
+				&--number {
+					font-size: 1.7rem !important;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 992px) {
+	.item-section {
+		&__title {
+			font-size: 3rem;
+		}
+
+		&__boxes {
+			flex-direction: row !important;
+		}
+	}
+}

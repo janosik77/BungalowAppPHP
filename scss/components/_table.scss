@@ -1,0 +1,243 @@
+@use '../abstracts';
+
+.table {
+	th,
+	td {
+		color: abstracts.$darkest !important;
+	}
+	&__actions {
+		width: 100px;
+	}
+}
+
+.reservations-table {
+	img {
+		border-radius: 6px;
+		object-fit: cover;
+		aspect-ratio: 1/1;
+	}
+
+	&__bungalow {
+		font-weight: bold;
+		font-size: 1.4rem;
+	}
+
+	&__guest {
+		display: flex;
+		flex-direction: column;
+
+		.name {
+			font-size: 1.4rem;
+			font-weight: 500;
+		}
+
+		.email {
+			font-size: 1.2rem;
+			font-weight: 400;
+		}
+	}
+
+	&__dates,
+	&__amount {
+		font-size: 1.2rem;
+		font-weight: 700;
+	}
+
+	&__actions {
+		display: flex;
+		// width: 100px;
+		gap: 0.5rem;
+		justify-content: space-between;
+
+		a,
+		.svg-button {
+			border-radius: 6px;
+			background: none;
+			padding: 0.4rem;
+			border: 1px solid transparent;
+			transition: all 0.3s ease-in-out;
+			text-decoration: none;
+			cursor: pointer !important;
+
+			&:hover {
+				background: transparent;
+				border-color: abstracts.$yellow;
+			}
+		}
+	}
+}
+
+.bungalows-table {
+	img {
+		border-radius: 6px;
+		object-fit: cover;
+		aspect-ratio: 1/1;
+	}
+
+	&__img {
+		width: 8rem;
+		height: 8rem;
+		box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.2);
+	}
+
+	&__name {
+		font-size: 1.4rem;
+		font-weight: 600;
+	}
+
+	&__capacity {
+		font-size: 1.4rem;
+		font-weight: 500;
+		letter-spacing: 1.5px;
+	}
+
+	&__price {
+		font-size: 1.2rem;
+		font-weight: 700;
+	}
+
+	&__discount {
+		// font-weight: 600;
+		font-weight: 300;
+		cursor: pointer;
+		text-transform: uppercase;
+		line-height: normal;
+		font-size: 1.3rem;
+		padding: 0.6rem 1.2rem;
+	}
+}
+
+.users-table {
+	&__name,
+	&__address {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__name {
+		.name {
+			font-size: 1.4rem;
+			font-weight: 500;
+		}
+
+		.email {
+			font-size: 1.2rem;
+			font-weight: 500;
+		}
+	}
+
+	&__address {
+		// color: #ddd;
+		.street {
+			font-weight: 600;
+		}
+	}
+
+	&__role {
+		text-transform: uppercase;
+	}
+}
+
+.customers-table {
+	&__phone,
+	&__nationality {
+		font-size: 1.3rem;
+	}
+}
+
+.status {
+	border-radius: 50px;
+	text-transform: uppercase;
+	line-height: normal;
+	font-size: 1.3rem;
+	padding: 0.6rem 1.2rem;
+	text-align: center;
+	// width: 50%;
+
+	&__out {
+		color: #888;
+		border: 1px solid #888;
+		background-color: #e8e8e8;
+	}
+
+	&__in,
+	&__completed {
+		color: #28be2e;
+		border: 1px solid #28be2e;
+		background-color: #ceffd0;
+	}
+
+	&__confirmed {
+		border: 1px solid #1c8b97;
+		color: #1c8b97;
+		background-color: #cffaff;
+	}
+
+	&__unconfirmed,
+	&__pending {
+		border: 1px solid #ec7d1a;
+		background-color: #ffd4ab;
+		color: #ec7d1a;
+	}
+
+	&__cancelled,
+	&__inactive {
+		background-color: #fd7575;
+		border: 1px solid #831414;
+		color: #831414;
+	}
+
+	&__active {
+		background-color: #ceffd0;
+		border: 1px solid #28be2e;
+		color: #28be2e;
+	}
+}
+
+.table tbody td {
+	cursor: initial !important;
+}
+
+.table {
+	border-radius: 6px !important;
+	font-family: inherit;
+
+	thead {
+		th {
+			background-color: abstracts.$yellow !important;
+			font-size: 1.4rem;
+			padding: 1.5rem 1.7rem;
+			cursor: pointer;
+			color: abstracts.$darkest !important;
+			// font-size: 1.5rem;
+			font-weight: 600;
+			border-bottom: 1px solid abstracts.$yellow-light;
+		}
+		&.bold {
+			th {
+				font-weight: 500;
+			}
+		}
+	}
+	tbody {
+		td {
+			background-color: abstracts.$darkest;
+			color: abstracts.$white !important;
+			font-size: 1.2rem;
+			padding: 1.5rem 1.7rem;
+			&:last-of-type {
+				cursor: pointer !important;
+			}
+		}
+		tr {
+			// font-weight: 500;
+			border-bottom: 1px solid abstracts.$yellow;
+			cursor: unset !important;
+		}
+		th,
+		td {
+			cursor: pointer;
+			vertical-align: middle;
+		}
+	}
+}

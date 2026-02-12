@@ -1,0 +1,82 @@
+@use '../abstracts';
+
+.header {
+	display: flex;
+	// justify-content: end;
+	// gap: 5rem;
+    justify-content: space-between;
+    gap: 2rem;
+
+	.user {
+		display: flex;
+		gap: 1rem;
+		align-items: center;
+
+		&__img {
+            position: relative;
+
+            img {
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                object-fit: cover;
+                aspect-ratio: 1/1;
+            }
+		}
+
+        &__status {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            border: 1px solid abstracts.$white;
+            position: absolute;
+            top: 0;
+            right: 0;
+
+            &--active {
+                background-color: abstracts.$green;
+            }
+        }
+
+		&__name {
+			font-weight: 700;
+            color: abstracts.$yellow;
+            margin-bottom: 0;
+            font-size: 1.7rem;
+		}
+
+		&__email {
+			font-size: 1.5rem;
+            font-weight: 300;
+			color: abstracts.$light-grey;
+		}
+	}
+
+    .action-btns {
+        display: flex;
+        flex-direction: row;
+        gap: 0.8rem;
+
+        button {
+            border-radius: 4px;
+            padding: 0.2rem 0.4rem;
+            background: transparent;
+            border: 1px solid transparent;
+            transition: all 0.3s ease-in-out;
+            position: relative;
+
+            &:hover {
+                background: transparent;
+                border: 1px solid abstracts.$yellow;
+            }
+        }
+    }
+}
+
+
+@media screen and (min-width: 768px){
+    .header {
+        justify-content: end;
+        gap: 6rem;
+    }
+}

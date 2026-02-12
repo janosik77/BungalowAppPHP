@@ -1,0 +1,48 @@
+@use '../abstracts';
+
+.stats-dropdown {
+	display: flex;
+	padding: 0.3rem 0.8rem;
+	align-items: center;
+	justify-content: space-between;
+	border: 1px solid abstracts.$blue;
+	background: transparent;
+	color: abstracts.$blue-dark;
+	border-radius: 6px;
+	position: relative;
+	cursor: pointer;
+	font-size: 1.1rem;
+	font-weight: 700;
+
+	option {
+        background-color: abstracts.$blue-light;
+        color: abstracts.$blue-dark;
+	}
+
+    &:hover {
+        border-color: abstracts.$blue-dark;
+    }
+
+    &:focus {
+        outline: none;
+        box-shadow: none;
+    }
+}
+
+@media screen and (min-width: 768px) {
+	.stats-dropdown {
+		width: 20%;
+	}
+}
+
+@media screen and (min-width: 992px) {
+	.stats-dropdown {
+		width: 14% !important;
+	}
+}
+
+@media screen and (min-width: 1500px) {
+	.stats-dropdown {
+		width: 10% !important;
+	}
+}

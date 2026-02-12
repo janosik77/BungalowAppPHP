@@ -1,0 +1,11 @@
+@use '../abstracts';
+
+.table-actions {
+    display: flex;
+    gap: 7rem;
+
+    &__sort, &__search {
+        display: flex;
+        gap: 2rem;
+    }
+}

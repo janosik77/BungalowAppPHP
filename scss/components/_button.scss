@@ -1,0 +1,32 @@
+@use '../abstracts';
+
+.button {
+	border-radius: 6px;
+	padding: 0.7rem 1.5rem;
+	font-size: 1.3rem;
+	font-weight: 700;
+	color: abstracts.$darkest;
+	background: abstracts.$yellow;
+	border: 1px solid transparent;
+	transition: opacity 0.3s ease-in-out;
+	text-decoration: none;
+	cursor: pointer;
+	margin-right: 0 !important;
+
+	&:hover {
+        opacity: .8;
+	}
+
+	&:disabled {
+        opacity: .8;
+	}
+}
+
+.button-secondary {
+	height: 100%;
+}
+
+.svg-button {
+	background: none;
+	border: none;
+}

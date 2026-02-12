@@ -62,7 +62,9 @@ Aplikacja działa w modelu **klient–serwer**:
 1. Sklonuj repozytorium
 2. Umieść projekt w katalogu serwera (np. `htdocs`)
 3. Skonfiguruj połączenie z bazą danych
-4. Uruchom aplikację w przeglądarce
+4. Zaimportuj backup bazy danych znajdujący się w pliku: bungalows_db.sql
+5. Skonfiguruj połączenie z bazą danych w plikach konfiguracyjnych aplikacji.
+6. Uruchom aplikację w przeglądarce
 
 ---
 
